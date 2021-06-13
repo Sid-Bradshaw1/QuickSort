@@ -1,0 +1,53 @@
+//
+// Created by Sid Bradshaw on 2/17/21.
+//
+
+#ifndef ITERATOR_INTERFACE_H
+#define ITERATOR_INTERFACE_H
+
+#include <string>
+
+template<typename T>
+class LinkedListInterface
+{
+public:
+    LinkedListInterface(void) {}
+    virtual ~LinkedListInterface(void) {}
+
+    /** Insert Node(value) at beginning of linked list */
+    virtual void push_front(const T& value) = 0;
+
+    /** Remove Node at beginning of linked list */
+    virtual void pop_front(void) = 0;
+
+    /** Return reference to value of Node at beginning of linked list */
+    virtual T& front(void) = 0;
+
+    /** Return true if linked list size == 0 */
+    virtual bool empty(void) const = 0;
+
+    /** Remove all Nodes with value from linked list */
+    virtual void remove(const T& value) = 0;
+
+    /** Remove all Nodes from linked list */
+    virtual void clear(void) = 0;
+
+    /** Reverse Nodes in linked list */
+    virtual void reverse(void) = 0;
+
+    /** Return the number of nodes in the linked list */
+    virtual size_t size(void) const = 0;
+
+    /** Return contents of Linked List as a string */
+    virtual std::string toString(void) const = 0;
+
+    /** BONUS ** Insert Node(value) at end of linked list */
+    //virtual void push_back(const T& value) = 0;
+
+    /** BONUS ** Remove Node at end of linked list */
+    //virtual void pop_back(void) = 0;
+
+    /** BONUS ** Return reference to value of Node at end of linked list */
+    //virtual T& back(void) = 0;
+};
+#endif	// LINKED_LIST_INTERFACE_H
